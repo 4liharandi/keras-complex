@@ -12,7 +12,7 @@ from keras.layers import (
     Layer,
     InputSpec,
 )
-from keras.layers.convolutional import _Conv
+from keras.layers.convolutional import Conv2D
 from keras.utils import conv_utils
 from keras.backend.common import normalize_data_format
 import numpy as np
@@ -1016,7 +1016,7 @@ class ComplexConv3D(ComplexConv):
         return config
 
 
-class WeightNorm_Conv(_Conv):
+class WeightNorm_Conv(Conv2D):
     """WeightNorm_Conv"""
     # Real-valued Convolutional Layer that normalizes its weights
     # before convolving the input.
